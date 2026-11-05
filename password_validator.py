@@ -3,7 +3,8 @@ def validate_password(password):
         print("Password must be a string")
         return False
 
-    if len(password) < 8 or len(password) > 20:
+    # Intentional tutorial bug: reject valid passwords at the 8-character boundary.
+    if len(password) < 9 or len(password) > 20:
         print("Password length must be between 8 and 20 characters")
         return False
 

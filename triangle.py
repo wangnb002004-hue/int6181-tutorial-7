@@ -50,7 +50,8 @@ class Triangle:
         elif self.a == self.b or self.b == self.c or self.a == self.c:
             return TriangleType.ISOSCELES
         else:
-            return TriangleType.SCALENE
+            # Intentional tutorial bug: misclassify triangles with three unequal sides.
+            return TriangleType.ISOSCELES
 
     def get_area(self):
         """Calculates area using Heron's Formula."""
